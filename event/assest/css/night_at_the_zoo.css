@@ -1,0 +1,56 @@
+.container {
+    text-align: center;
+}
+
+.content_day {
+    top: 0;
+    margin-top: 150px;
+    text-align: center;
+    line-height: 2;
+}
+
+span.day {
+    color: #FF7F00;
+    text-align: center;
+}
+
+.fa-calendar {
+    color: #FF7F00;
+}
+
+.content_day img {
+    width: 100%;
+    margin-top: 35px;
+}
+
+.content_day p {
+    text-align: justify;
+    font-size: 19px;
+    margin-top: 30px;
+}
+
+.content_day p strong {
+    font-size: 26px;
+}
+
+.footer_primary {
+    margin-top: 30px;
+}
+
+.details,
+.organizer {
+    text-align: left;
+}
+
+.details p a {
+    color: black;
+    text-decoration: none;
+}
+
+.details p:hover a {
+    color: #FF7F00;
+}
+
+.map {
+    width: 100%;
+}

@@ -1,0 +1,76 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+a {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.right_contact li a {
+    color: #007F76;
+}
+
+.row.head_wapper {
+    margin-top: 40px;
+}
+
+.left_contact {
+    float: left;
+}
+
+.left_contact {
+    border: 1px solid #007F76;
+    padding-left: 50px;
+    border-radius: 10px;
+}
+
+.col-sm-7.left_contact {
+    padding: 35px;
+}
+
+#txtName,
+#txtPhone,
+#txtEmail,
+#txtChooses,
+#txttext {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #007F76;
+    margin-top: 15px;
+}
+
+#txtubmit {
+    padding: 8px 35px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #007F76;
+    color: #FFF;
+    font-weight: 500;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+#txtubmit:hover {
+    background-color: #115e23;
+    transition: all 0.3s;
+}
+
+.right_contact ul {
+    list-style-type: none;
+}
+
+.right_contact {
+    font-size: 28px;
+    font-weight: 600;
+}

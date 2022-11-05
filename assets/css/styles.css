@@ -1,0 +1,372 @@
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif
+    }
+    /* CSS dùng chung */
+    
+    .clear {
+        clear: both;
+    }
+    /* Main */
+    
+    #header {
+        height: 130px;
+        background-color: #ffffffe6;
+        position: fixed;
+        /*để cho phần nav dính sát lên trên đầu, cuộn lên cuộn xuống ko bị ẩn đi */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0 1px #ccc;
+    }
+    
+    #logo {
+        float: left;
+        margin-left: 40px;
+    }
+    
+    #logo img {
+        padding-top: 8px;
+        width: 85px;
+    }
+    
+    #logo img:hover {
+        opacity: 0.9;
+    }
+    
+    #nav-first {
+        /* height: 50px;
+    word-spacing: -6px;  
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px; */
+        margin: 0;
+        float: right;
+    }
+    
+    #nav-first li {
+        list-style: none;
+        display: inline-block;
+        margin-right: -6px;
+    }
+    
+    #nav-first li a {
+        color: #fff;
+        width: 30px;
+        font-weight: 550;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 50px;
+        font-size: 17px;
+        font-weight: bold !important;
+    }
+    
+    #nav-first li:hover a {
+        opacity: 0.8;
+    }
+    
+    #nav-first .support {
+        background-color: #eb952a;
+        padding: 18px 24px;
+    }
+    
+    #nav-first .membership {
+        background-color: #5ea514;
+        padding: 18px 24px;
+    }
+    
+    #nav-first .donate {
+        background-color: #00a99d;
+        padding: 18px 24px;
+    }
+    
+    #nav-second {
+        margin: 0px;
+        float: right;
+        clear: right;
+    }
+    
+    #nav-second>li {
+        display: inline-block;
+        position: relative;
+    }
+    
+    #nav-second>li>a {
+        border-radius: 5px;
+        font-weight: 600;
+        /* text-transform: uppercase; */
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    #nav-second li a {
+        color: #000;
+        text-decoration: none;
+        padding: 0px 25px;
+        line-height: 70px;
+        display: inline-block;
+        font-weight: bold !important;
+        font-size: 20px;
+    }
+    
+    #nav-second>li:hover>a {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #5ea514;
+    }
+    
+    #nav-second li:hover .subnav-tickets {
+        display: block;
+        padding: 0;
+    }
+    
+    #nav-second .subnav-tickets {
+        display: none;
+        position: absolute;
+        min-width: 200px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    #nav-second .subnav-tickets li {
+        list-style: none;
+    }
+    
+    #nav-second .subnav-tickets a {
+        color: #fff;
+        font-size: 17px;
+        line-height: 60px;
+    }
+    
+    #nav-second .subnav-tickets li:hover a {
+        color: #5ea514;
+        background-color: #f5f5f5;
+        display: block;
+    }
+    
+    #slider-home {
+        position: relative;
+        padding-top: 48%;  /* chiều cao sẽ bằng nửa chiều ngang */
+        background: url('https://brevardzoo.org/wp-content/uploads/2021/08/visit-banner-bear.jpg') top center / cover no-repeat;
+    }
+    
+    #slider-home .text-slider {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        bottom: 10px;
+        color: #fff;
+    }
+    
+    #slider-home .text-description {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    /* CSS Info-section */
+    
+    #content .info-section {
+        background-color: #ea942c;
+        text-align: center;
+        font-size: 129%;
+        padding: 20px;
+        line-height: 30px;
+        color: #fff;
+    }
+    
+    #content .info-heading {
+        margin-bottom: 15px;
+    }
+    
+    #content .info-text {
+        text-align: justify;
+        padding: 0px 15px;
+    }
+    /* CSS Category -section*/
+    
+    #content .category-section {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    
+    #content .category-heading {
+        margin: 10px 22px;
+    }
+    
+    #content .category-text {
+        font-size: 20px;
+        padding: 0px 25px;
+    }
+    
+    #content .animals-list {
+        padding: 25px;
+    }
+    
+    #content .animal-item {
+        float: left;
+        width: calc(100% / 4);
+        position: relative;
+        /*để khi hover chuyển động ảnh không ảnh hưởng đến phần dưới*/
+    }
+    
+    #content .animal-name {
+        font-size: 20px;
+        padding: 30px 0 10px;
+        text-transform: uppercase;
+        width: 90%;
+        text-align: center;
+        font-weight: bold !important;
+    }
+    
+    #content .animal-img {
+        width: 90%;
+        border-radius: 1px;
+        margin-bottom: 30px;
+        transition: transform .2s;
+    }
+    
+    #content .animal-img:hover {
+        transform: scale(1.05);
+        /*liên kết vs .animal-item*/
+    }
+    /* CSS animals-section */
+    
+    #content .protect-section {
+        position: relative;
+        padding-top: 45%;
+        /* chiều cao bằng nửa chiều rộng*/
+        background: url('https://brevardzoo.org/wp-content/uploads/2020/12/fancybox-jaguar.jpg') top center / cover no-repeat;
+    }
+    
+    #content .content-item {
+        position: absolute;
+        width: 30%;
+        bottom: 30%;
+        left: 10%;
+        color: #fff;
+        line-height: 40px;
+        font-size: 22px;
+    }
+    
+    #content .content-heading {
+        font-weight: 545;
+        line-height: 50px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    
+    #content .content-text {
+        opacity: 0.8;
+        margin-bottom: 30px;
+        border-radius: 1px;
+    }
+    
+    #content .protect-btn a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #ea9400;
+        text-transform: uppercase;
+        padding: 9px 30px;
+        font-size: 30px;
+        font-weight: bold !important;
+    }
+    
+    #content .protect-btn a:hover {
+        background-color: #f26700;
+        transition: background ease 0.5s;
+        /*ấn vào đổi màu background*/
+    }
+    
+    #content .safari-section {
+        margin: 0px auto;
+        position: relative;
+      
+    }
+    
+    #content .text-safari {
+        background-color: #5ea514;
+        color: #fff;
+        font-size: 38px;
+        text-transform: uppercase;
+        font-weight: bold !important;
+        padding: 30px;
+        margin: 20px 0px;
+    }
+    
+    #content .safari-btn {
+        position: absolute;
+        left: 80%;
+        bottom: 20%;
+        display: block;
+        font-size: 30px;
+        font-weight: bold !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #5ea514;
+        background-color: #fff;
+        padding: 14px 30px;
+        border-radius: 1px;
+    }
+    
+    #content .safari-btn:hover {
+        color: #fff;
+        background-color: #0076a3;
+        transition: background ease 0.5s;
+    }
+    
+    #content .work-section {
+        margin-top: 10px;
+        position: relative;
+        padding-top: 50%;
+        width: 100%;
+        background: url('../img/275026421_1655113204923670_816201373137567473_n.png') top center / cover no-repeat;
+    }
+    /* footer */
+    
+    #footer .top-footer {
+        margin: 40px 0px;
+        text-align: center;
+    }
+    
+    #footer .nav-footer li {
+        display: inline-block;
+        margin: 0px 20px;
+    }
+    
+    #footer .nav-footer li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 21px;
+        font-weight: bold !important;
+    }
+    
+    #footer .social-button {
+        margin: 15px 30px;
+        text-align: center;
+    }
+    
+    #footer .social-button i {
+        font-size: 35px;
+        padding: 12px;
+        margin: 0px 20px 10px;
+        color: #000;
+    }
+    
+    #footer .social-button a:hover {
+        opacity: 0.6;
+    }
+    
+    #footer .bottom-footer {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0px 30px 10px;
+        font-size: 15px;
+        opacity: 0.8;
+        line-height: 1.5;
+    }
